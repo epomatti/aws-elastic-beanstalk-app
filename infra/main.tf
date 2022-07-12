@@ -31,3 +31,22 @@ resource "aws_dynamodb_table" "tasks" {
     type = "S"
   }
 }
+
+resource "aws_elastic_beanstalk_application" "main" {
+  name        = "tasks-app"
+  description = "An application to create simple tasks"
+}
+
+resource "aws_elastic_beanstalk_environment" "main" {
+  name                = "tasks-environment"
+  application         = aws_elastic_beanstalk_application.main.name
+  solution_stack_name = "64bit Amazon Linux 2 v3.4.17 running Docker"
+
+  setting {
+    namespace = "aws:ec2:vpc"
+    name      = "VPCId"
+    value     = "vpc-xxxxxxxx"
+  }
+
+  
+}
