@@ -25,6 +25,12 @@ Add to path:
 mv composer.phar /usr/local/bin/composer
 ```
 
+Start the server:
 
-
+```sh
 php -S localhost:8080 -t public public/index.php
+```
+
+```sh
+docker build -t beanstalk-php .
+```
