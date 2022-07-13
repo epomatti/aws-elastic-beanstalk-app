@@ -1,12 +1,16 @@
 # aws-elastic-beanstalk-app
 
-## 
+## Setup Beanstalk
 
-Setup Beanstalk config
+Simply create the infrastructure:
 
-https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html#command-options-general-autoscalinglaunchconfiguration
-https://automateinfra.com/2021/03/24/how-to-launch-aws-elastic-beanstalk-using-terraform/
-https://docs.aws.amazon.com/elasticbeanstalk/latest/platforms/platforms-supported.html#platforms-supported.PHP
+```sh
+terraform init
+terraform apply -auto-approve
+```
+
+And upload the code archive to the app.
+
 
 ## Local Development
 
@@ -40,3 +44,9 @@ php -S localhost:8080 -t public public/index.php
 ```sh
 docker build -t beanstalk-php .
 ```
+
+## References
+
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html#command-options-general-autoscalinglaunchconfiguration
+https://automateinfra.com/2021/03/24/how-to-launch-aws-elastic-beanstalk-using-terraform/
+https://docs.aws.amazon.com/elasticbeanstalk/latest/platforms/platforms-supported.html#platforms-supported.PHP
