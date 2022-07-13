@@ -121,10 +121,9 @@ resource "aws_elastic_beanstalk_application" "main" {
 }
 
 resource "aws_elastic_beanstalk_environment" "main" {
-  name                = "tasks-environment"
+  name                = "tasks"
   application         = aws_elastic_beanstalk_application.main.name
   solution_stack_name = "64bit Amazon Linux 2 v3.3.15 running PHP 8.0"
-  # solution_stack_name = "64bit Amazon Linux 2 v3.4.17 running Docker"
 
   // Settings
 
