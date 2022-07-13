@@ -2,6 +2,12 @@
 
 ## 
 
+Setup Beanstalk config
+
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html#command-options-general-autoscalinglaunchconfiguration
+https://automateinfra.com/2021/03/24/how-to-launch-aws-elastic-beanstalk-using-terraform/
+https://docs.aws.amazon.com/elasticbeanstalk/latest/platforms/platforms-supported.html#platforms-supported.PHP
+
 ## Local Development
 
 ```sh
