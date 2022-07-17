@@ -29,6 +29,12 @@ php composer-setup.php
 php -r "unlink('composer-setup.php');"
 ```
 
+
+```sh
+sudo apt-get install php-curl php-xml -y
+```
+
+
 Add to path:
 
 ```sh
