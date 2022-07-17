@@ -130,25 +130,29 @@ resource "aws_elastic_beanstalk_environment" "main" {
   setting {
     namespace = "aws:autoscaling:launchconfiguration"
     name      = "IamInstanceProfile"
-    value     = aws_iam_instance_profile.main.arn
+    value     = aws_iam_instance_profile.main.name
+    resource  = ""
   }
 
   setting {
     namespace = "aws:ec2:vpc"
     name      = "VPCId"
     value     = aws_vpc.main.id
+    resource  = ""
   }
 
   setting {
     namespace = "aws:ec2:vpc"
     name      = "Subnets"
     value     = aws_subnet.main.id
+    resource  = ""
   }
 
   setting {
     namespace = "aws:elasticbeanstalk:environment"
     name      = "EnvironmentType"
     value     = "SingleInstance"
+    resource  = ""
   }
 
 }
